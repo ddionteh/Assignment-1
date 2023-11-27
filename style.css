@@ -1,0 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+  display: flex;
+  background-color: black;
+}
+
+.nav > a {
+  padding: 0% 5% 0% 5%;
+  overflow: hidden;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  color: #A7A3A3;
+  position: sticky;
+  
+}
+
+.nav > a:hover {
+
+}
