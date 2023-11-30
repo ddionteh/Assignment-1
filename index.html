@@ -9,14 +9,28 @@
 </head>
 <body>
     <nav class = "nav">
-        <img src="logo.png" alt="Philosophy Hub Logo"> 
-        <a href = "#">Home</a>
-        <a href = "#">Philosophers</a>
-        <a href = "#">Quotes</a>
-        <a href = "#">Topics</a>
-        <a href = "#">About Us</a>
-    </nav>
+        <img src="images/logo-white.png" alt="Philosophy Hub Logo" class = "logo"> 
+        <ul class = "nav-links">
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "philosophers.html">Philosophers</a></li>
+            <li><a href = "#">Quotes</a></li>    
+            <li><a href = "#">Topics</a></li>
+            <li><a href = "#">About Us</a></li>
+        </ul>
+        <p class="menu cta">Menu</p>
 
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="philosophers.html">Philosophers</a>
+            <a href="#">Quotes</a>
+            <a href="#">Topics</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+    </nav>
+    
     <div class="welcome-section">
         <t>Philosophy Hub</t>
         <br>
@@ -36,11 +50,11 @@
 
     <footer>
         <div class="footer-content">
-        <img src="logo.png" alt="Philosophy Hub Logo"> 
+        <img src="images/logo-white.png" alt="Philosophy Hub Logo" class = "logo"> 
         <p>@Copyrights 2023 Philosophy Hub<br>All Rights Reserved.</p>
         <p>Follow us at:
             <a href="https://facebook.com" target="_blank" rel="noopener">
-            <img src="facebook-icon.png" alt="Facebook: @philosophyhub">
+            <img src="facebook-icon.png" alt="Facebook: Philosophy Hub">
             </a>
             
             <a href="https://instagram.com" target="_blank"  rel="noopener">
@@ -57,6 +71,7 @@
 
 
     <script type="module" src="main.js"></script>
+    <script type="text/javascript" src="mobile.js"></script>
 </body>
 </html>
 

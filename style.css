@@ -1,23 +1,244 @@
-body, html {
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Define the style for the navigation bar */
 .nav {
   display: flex;
-  background-color: black;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  justify-content: space-between;
+  padding: 5px 10px; /* Adjust vertical and horizontal padding */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other elements on the page */
 }
 
-.nav > a {
-  padding: 0% 5% 0% 5%;
-  overflow: hidden;
+/* Define the style for the navigation links */
+.nav a {
+  margin-left: 10px; /* Reduce margin for a more compact layout */
   text-decoration: none;
-  flex-wrap: nowrap;
-  color: #A7A3A3;
-  position: sticky;
-  
+  color: white;
 }
 
-.nav > a:hover {
+.nav-links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
 
+/* Define the style for the navigation logo */
+.nav .logo {
+  width: 80px; 
+  height: 80px; 
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  padding: 0px 15px; /* Adjust padding for a more compact layout */
+}
+
+.nav-links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 6px 20px; /* Adjust padding for a more compact button */
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Define the style for the welcome section */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-image: url("philosophy-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Define the style for the welcome section text */
+.welcome-section {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+/* Define the style for the quote of the day section */
+.quote-of-the-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #eee;
+  color: #333;
+  padding: 20px;
+}
+
+/* Define the style for the quote of the day heading */
+.quote-of-the-day h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Define the style for the quote of the day paragraph */
+.quote-of-the-day p {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* Define the style for the philosopher of the day section */
+.philosopher-of-the-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #ddd;
+  color: #333;
+  padding: 20px;
+}
+
+/* Define the style for the philosopher of the day heading */
+.philosopher-of-the-day h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Define the style for the philosopher of the day paragraph */
+.philosopher-of-the-day p {
+  font-size: 20px;
+}
+
+/* Define the style for the footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Define the style for the footer logo */
+footer img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Define the style for the footer content */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Define the style for the footer social media icons */
+.footer-content a img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+  margin-right: 30px;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
 }
