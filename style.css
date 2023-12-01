@@ -81,18 +81,78 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400px;
-  background-image: url("philosophy-background.jpg");
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
+  background-color: #121212;
   color: white;
+  font-weight: bold;
+  font-size: 4.5vw;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
-/* Define the style for the welcome section text */
-.welcome-section {
-  font-weight: bold;
-  font-size: 32px;
+#sub-text {
+  font-size: 1.5vw;
+  padding: 10px;
+  text-align: center;
 }
+
+.welcome-section h1, .welcome-section p {
+  opacity: 0;
+  transform: translateY(30px);
+  
+}
+
+.welcome-section.show-text h1, .welcome-section.show-text p {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+#philosopher-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 415px;
+  z-index: 2;
+}
+
+#philosopher-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 415px;
+  z-index: 2;
+}
+
+/* Stars animation */
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  animation: moveStars 8s linear infinite;
+  background: url('images/star.png'); /* Replace with your stars or galaxies image */
+  background-size: cover;
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate3d(-15%, -15%, 0);
+  }
+  50% {
+    transform: translate3d(5%, 5%, 0);
+  }
+  100% {
+    transform: translate3d(30%, 30%, 0);
+  }
+}
+
+
 
 /* Define the style for the quote of the day section */
 .quote-of-the-day {
@@ -172,7 +232,7 @@ footer img {
 }
 
 
-/* Mobile Nav */
+/* Mobile Navigation */
 
 .menu {
   display: none;
@@ -233,7 +293,7 @@ footer img {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .nav-links,
   .cta {
     display: none;
@@ -242,3 +302,5 @@ footer img {
     display: initial;
   }
 }
+
+
