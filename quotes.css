@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Define the style for the navigation bar */
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  justify-content: space-between;
+  padding: 5px 10px; /* Adjust vertical and horizontal padding */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other elements on the page */
+}
+
+/* Define the style for the navigation links */
+.nav a {
+  margin-left: 10px; /* Reduce margin for a more compact layout */
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+/* Define the style for the navigation logo */
+.nav .logo {
+  width: 80px; 
+  height: 80px; 
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  padding: 0px 15px; /* Adjust padding for a more compact layout */
+}
+
+.nav-links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 6px 20px; /* Adjust padding for a more compact button */
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Navigation */
+
+.menu {
+    display: none;
+    margin-right: 30px;
+}
+  
+.overlay {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+background-color: #24252a;
+overflow-x: hidden;
+transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+width: 100%;
+}
+
+.overlay-content {
+display: flex;
+height: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.overlay a {
+padding: 15px;
+font-size: 36px;
+display: block;
+transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+color: #0088a9;
+}
+.overlay .close {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 60px;
+color: #edf0f1;
+}
+
+.category {
+  position: absolute;
+  top:90px;
+}
+
+/* Define the style for the footer */
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: lightgray;
+}
+
+.footer-logo {
+  width: 40vw;
+  display: flex;
+}
+
+#footer-logo {
+  width: calc(2vw + 100px);
+  margin-left: calc(30px + 3vw);
+}
+
+.container-logo-social-media {
+  width: calc(20vw + 100px);
+  overflow: hidden;
+  margin-left: 15px;
+}
+
+.h_line {
+  width: calc(70px + 15vw);
+  height: 4px;
+  margin:10px;
+  background: white;
+}
+
+.Social-Media > a > img {
+  width: calc(5vw + 15px);
+  margin-left: 10px;
+}
+
+.details {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 30px;
+  font-size: calc(10px + 0.5vw);
+  word-wrap: break-word;
+}
+
+.Contact-Us {
+  padding-left: 3vw;
+}
+
+.Find-Us-At {
+  padding-left: 3vw;
+}
+
+.Partners {
+  padding-left: 3vw;
+}
+
+/* Resizing for Menu/Navigation bar */
+@media screen and (max-height: 450px) {
+  .overlay a {
+      font-size: 20px;
+  }
+  .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
+  }
+  
+  @media only screen and (max-width: 768px) {
+  .nav-links,
+  .cta {
+      display: none;
+  }
+  .menu {
+      display: initial;
+  }
+  } 
+  
+/* Resizing for Footer, mobile version */
+@media only screen and (max-width: 768px) {
+  .details {
+    white-space: normal;
+    font-size: calc(8px + 0.5vw);
+    padding-right: 20px;
+  }
+  #footer-logo {
+    margin-left: 0px;
+  }
+  .Contact-Us {
+    width: 100%;
+  }
+  .Find-Us-At {
+    width: 100%;
+    padding-right: 2px;
+  }
+  .Partners {
+    padding-left: 3px;
+    width: 100%;
+  }
+}
+
+
