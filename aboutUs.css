@@ -4,7 +4,6 @@
     overflow-x: hidden;
   }
   
-  
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
   
   /* Define the style for the navigation bar */
@@ -304,7 +303,7 @@
     font-size: calc(10px + 3vw);
   }
   .our-mission p {
-    font-size: calc(5px + 1vw);
+    font-size: calc(9px + 1vw);
   }
   .our-values p {
     font-size: calc(11px + 1vw);
@@ -316,6 +315,9 @@
   }
   #footer-logo {
     margin-left: 0px;
+  }
+  .Social-Media > a > img {
+    width: calc(5vw + 5px);
   }
   .Contact-Us {
     width: 100%;
