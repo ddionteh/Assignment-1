@@ -100,7 +100,6 @@
 .welcome-section h1, .welcome-section p {
   opacity: 0;
   transform: translateY(30px);
-  
 }
 
 .welcome-section.show-text h1, .welcome-section.show-text p {
@@ -152,30 +151,121 @@
   }
 }
 
-
-
 /* Define the style for the quote of the day section */
 .quote-of-the-day {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  background-color: #eee;
+  height: 600px;
+  background-color: black;
+  flex: nowrap;
   color: #333;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;      
+  z-index: -5;
 }
 
 /* Define the style for the quote of the day heading */
-.quote-of-the-day h1 {
+#qotd-title {
   font-weight: bold;
   font-size: 24px;
+  z-index: 3;
+  text-align: center;
+  color: grey;
+  padding-top: 5px;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9);
 }
 
-/* Define the style for the quote of the day paragraph */
-.quote-of-the-day p {
+/* Define the style for the quote */
+.quote {
   font-style: italic;
-  font-size: 20px;
+  font-size: calc( 10px + 2vw );
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  transition: opacity 5s ease-in;
+}
+
+#cloud {
+  position: absolute;
+  width: 100vw;
+  max-height: 400px;
+  top:0;
+  z-index: -2;
+  
+}
+
+#rain {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  width: 100vw;
+  height: 600px;
+  background-size: contain;
+}
+
+#ocean {
+  position: absolute;
+  width: 100vw;
+  height: calc(130px + 10vw);
+  top:30%;
+  z-index: -1;
+}
+
+#boat {
+  top: calc(10px + 1vw);
+  left: 20%;
+  position: absolute;
+  transform: translateZ(-1px) scale(2);
+  transform-origin: center;
+  z-index: -1;
+  animation: tiltUpDown 6s infinite alternate,leftRight 8s ease-in; /* Adjust the duration as needed */
+}
+
+@keyframes leftRight {
+    0% {
+        left: 10%;
+        
+    }
+    25% {
+        left: 15%;
+    }
+    50% {
+        left: 20%;
+    }
+    75% {
+        left: 25%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes tiltUpDown {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg); 
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg); 
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+  
+}
+
+#lightning {
+  position: absolute;
+  top: 50px;
+  z-index: 3;
+  left: 20%;
 }
 
 /* Define the style for the philosopher of the day section */
@@ -184,55 +274,211 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: auto;
   background-color: #ddd;
   color: #333;
-  padding: 20px;
+  padding: 30px;
 }
 
-/* Define the style for the philosopher of the day heading */
-.philosopher-of-the-day h1 {
+.philosopher-title {
+  font-size: calc(10px + 2vw ); 
+  margin-bottom: 30px;
+  text-shadow: 1px 3px 2px rgba(255, 255, 255, 0.9);
+}
+
+.philosopher {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rounded-rectangle {
+  width: calc(150px + 20vw);
+  border-radius: 20px; /* Adjust the border-radius to control the roundness */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Optional box shadow for a subtle effect */
+}
+
+#philosopher {
+  display: block;
+  width: 100%; /* Make the image fill the container */
+  border-radius: 20px; /* Match the border-radius of the container */
+}
+
+.philosopher > p {
+  margin-left: 5vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-size: calc(10px + 1vw ); 
+}
+
+.philosopher > h1 {
+  font-size: calc(25px + 1.5vw);
+}
+#birth {
+  padding-top: 10px;
+  font-size: calc(10px + 2vw ); 
   font-weight: bold;
-  font-size: 24px;
+  margin-left: 20px;
 }
 
-/* Define the style for the philosopher of the day paragraph */
-.philosopher-of-the-day p {
-  font-size: 20px;
+#famous-quote {
+  font-size: calc(10px + 2vw ); 
+  font-weight: bold;
+}
+
+#description {
+  padding-top: 5px;
+  font-size: calc(10px + 1vw ); 
 }
 
 /* Define the style for the footer */
-footer {
+
+.footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: lightgray;
 }
 
-/* Define the style for the footer logo */
-footer img {
-  width: 100px;
-  height: 100px;
-}
-
-/* Define the style for the footer content */
-.footer-content {
+.footer-logo {
+  width: 40vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-/* Define the style for the footer social media icons */
-.footer-content a img {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
+#footer-logo {
+  width: calc(2vw + 100px);
+  margin-left: calc(30px + 3vw);
 }
 
+.container-logo-social-media {
+  width: calc(20vw + 100px);
+  overflow: hidden;
+  margin-left: 15px;
+}
 
-/* Mobile Navigation */
+.h_line {
+  width: calc(70px + 15vw);
+  height: 4px;
+  margin:10px;
+  background: white;
+}
+
+.Social-Media > a > img {
+  width: calc(5vw + 15px);
+  margin-left: 10px;
+}
+
+.details {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 30px;
+  font-size: calc(10px + 0.5vw);
+  word-wrap: break-word;
+}
+
+.Contact-Us {
+  padding-left: 3vw;
+}
+
+.Find-Us-At {
+  padding-left: 3vw;
+}
+
+.Partners {
+  padding-left: 3vw;
+}
+
+/* Resizing for mobile version */
+@media only screen and (max-width: 768px) {
+  .details {
+    white-space: normal;
+    font-size: calc(8px + 0.5vw);
+    padding-right: 20px;
+  }
+  #footer-logo {
+    margin-left: 0px;
+  }
+  .Contact-Us {
+    width: 100%;
+  }
+  .Find-Us-At {
+    width: 100%;
+    padding-right: 2px;
+  }
+  .Partners {
+    padding-left: 3px;
+    width: 100%;
+  }
+  #ocean {
+    height: calc(130px + 20vw);
+    padding-top: 50px;
+  }
+
+  #cloud {
+    height: 300px;
+  }
+  #boat {
+    width: calc(250px + 30vw);
+    left: 5%;
+    top: 100px;
+  }
+
+  #lightning {
+    left:0%;
+  }
+
+  @keyframes leftRight {
+    0% {
+        left: 5%;
+        
+    }
+    25% {
+        left: 10%;
+    }
+    50% {
+        left: 5%;
+    }
+    75% {
+        left: 10%;
+    }
+    100% {
+        left: 5%;
+    }
+  }
+
+  @keyframes tiltUpDown {
+    0% {
+      transform: rotate(-5deg);
+    }
+    25% {
+      transform: rotate(5deg); 
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    75% { 
+      transform: rotate(5deg); 
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+  #main-text {
+    font-size: calc(35px + 4vw);
+  }
+  #sub-text {
+    font-size: calc(9px + 1vw);
+  }
+  #philosopher-1, #philosopher-2 {
+    height: calc(200px + 10vw);
+  }
+}
+
+/* Mobile Navigation including media queries */
 
 .menu {
   display: none;

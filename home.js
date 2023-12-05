@@ -22,9 +22,3 @@ const flashLightning = () => {
 
 // Trigger the flashing animation
 flashLightning();
-
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  var boatElement = document.getElementById('boat');
-  boatElement.style.top = scrollPosition + 'px';
-});
