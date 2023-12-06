@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
   }
- 
+  
 /* Styling for Quotes page */
 .quotes-page {
   margin-top: 90px;
@@ -13,7 +13,8 @@
 }
 
 .quotes-page > h1 {
-  font-size: calc(15px + 1.5vw);
+  margin-left: calc(10px + 0.2vw);
+  margin-top: 30px;
 }
 
 .category-section {
@@ -21,6 +22,7 @@
   gap: calc(3px + 0.8vw);
   flex-wrap: wrap;
   overflow-x: auto;
+  margin-left: calc(10px + 0.2vw);
 }
 
 .category {
@@ -48,19 +50,26 @@
   background-color: green;
 }
 
+.quotes-section > h1 {
+  margin-left: calc(10px + 0.2vw);
+}
+
 .quote-card {
   background-color: #ffffff; /* White background */
   border: 2px solid #dddddd; /* Light gray border */
   border-radius: 15px; /* Rounded corners */
   padding: 20px; /* Padding around the content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lifted effect */
-  max-width: 400px; /* Maximum width for responsiveness */
+  max-width: 90vw; /* Maximum width for responsiveness */
   margin: 20px auto; /* Center the card and provide spacing */
 }
 
 .quote-image {
-  width: 100px; /* Set the width of the philosopher's image */
-  height: 100px; /* Set the height of the philosopher's image */
+  width: 100px; 
+  height: 100px; 
+  background-position: 50% 50%; /* Display center of image */ 
+  background-size: cover;
+  background-repeat: no-repeat;
   object-fit: cover; /* Ensure the image covers the container without stretching */
   border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
   margin-bottom: 10px; /* Spacing between image and text */
@@ -90,10 +99,44 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
 }
 
+.comments-form {
+  display: flex; /* Align the input and button in a row */
+  margin-top: 20px; /* Add some space above the form */
+}
 
+.comments-form input {
+  flex-grow: 1; /* Allow the input to take up the remaining space */
+  margin-right: 10px; /* Add some space to the right of the input */
+  padding: 5px; /* Add some padding inside the input */
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 5px; /* Round the corners */
+}
+
+.comments-form button {
+  padding: 5px 10px; /* Add some padding inside the button */
+  background-color: #0171d3; /* Set the background color */
+  color: #fff; /* Set the text color */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change the cursor on hover */
+}
+
+.comments-div {
+  margin-top: 20px; /* Add some space above the comments */
+}
+
+.comments-div p {
+  background-color: #f8f8f8; /* Set a light background color */
+  padding: 10px; /* Add some padding */
+  border-radius: 5px; /* Round the corners */
+  margin-bottom: 10px; /* Add some space below each comment */
+}
+
+.category.selected {
+  background-color: green;
+}
 
 /* Define the style for the footer */
-
 .footer {
   display: flex;
   width: 100%;
