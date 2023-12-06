@@ -1,49 +1,54 @@
-# Front-End Development Assignment 1
-One or two paragraphs providing an overview of your project. Tell us about your project.
+Front-End Development Assignment 1: Overview
+Project Overview
 
-Essentially, this part is your sales pitch.
+Our project is a dynamic and interactive website designed to cater to a diverse audience seeking inspiration, information, and engagement. The core components of our website include a Quotes page, a Sign-up form, a Home page, and an About Us section. Each element is meticulously crafted to provide a user-friendly experience and valuable content.
 
-# Design Process
-Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The Quotes page is a unique feature allowing users to engage with a wide array of quotes. It includes functionalities such as commenting, filtering, and categorizing, enabling users to interact and find quotes that resonate with their interests and needs.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+The Sign-up form is designed for ease of use, encouraging users to join our community. It is a gateway for users to access more personalized content and engage more deeply with our platform.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
+The Home page serves as the welcoming point of our website, offering a snapshot of what we offer and guiding users to various sections according to their interests.
 
-# Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+The About Us section delves into our mission, values, and story, offering a transparent view of who we are and what we aim to achieve.
 
-### Existing Features
-* Feature 1 - allows users X to achieve Y, by having them fill out Z
-* ...
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+Design Process
 
-### Features Left to Implement
-Another feature idea
-# Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+Target Audience & Goals
+Our website is designed for individuals seeking motivation, insight, and a community platform. The primary goal is to provide an enriching experience that is both informative and interactive.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
-# Testing
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+User Stories
+As a motivational speaker, I want to find and comment on inspirational quotes, so that I can share them in my sessions.
+As a student, I want to filter quotes based on categories like 'studying' or 'perseverance,' so that I can find relevant content for my academic journey.
+As a potential member, I want to easily sign up, so that I can access more personalized content and community features.
+Design Artifacts
+Wireframes and mockups were created to visualize the website layout.
+Adobe XD was used for designing and prototyping.
+Adobe XD Share URL: [Insert Adobe XD Share URL here]
+The wireframes are included in the project directory under 'Design_Mockups.'
+Features
+Existing Features
+Quote Interaction: Allows users to engage with quotes through comments and likes.
+Dynamic Filtering: Enables users to filter quotes by categories.
+Responsive Sign-Up Form: Simplifies the registration process for new users.
+Informative About Us Page: Shares our mission, values, and story.
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Features Left to Implement
+User Profile Customization: To allow users to personalize their experience on the site.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+Technologies Used
+JQuery: Used for simplifying DOM manipulation. JQuery Official Site
+[Other technologies used]
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-# Credits
-### Content
-The text for section Y was copied from the Wikipedia article Z
-### Media
-The photos used in this site were obtained from ...
-### Acknowledgements
-I received inspiration for this project from X
+Testing
+Manual Testing Scenarios
+Contact Form Test:
+Navigate to "Contact Us" page.
+Attempt to submit an empty form to check for required field validation.
+Submit with an invalid email and verify error messaging.
+Submit a valid form and confirm the success message.
+Cross-Browser and Responsiveness
+The website was tested across multiple browsers and screen sizes to ensure compatibility and responsiveness.
+Known Issues
+[List any known bugs or issues, even if not yet resolved]
+Testing Documentation
+For detailed testing scenarios and outcomes, refer to [Testing Documentation Link].
