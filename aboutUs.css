@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
   }
   
 /* Content */
@@ -153,6 +152,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  * {
+    overflow: hidden;
+  }
   .our-mission h1, .our-mission p {
     margin-left: calc(170px + 15vw);
   }

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="navigation.js"></script>
     <title>Main Page</title>
 
 </head>
@@ -16,7 +18,12 @@
             <li><a href ="index.html">Home</a></li>
             <li><a href ="quotes.html">Quotes</a></li>    
             <li><a href ="aboutUs.html">About Us</a></li>
-            <li><div class="sign-up-container"><a href ="signUp.html">Sign Up</a></div></li>
+            <li id="nav-item">
+                <div class="sign-up-container">
+                    <a href="signUp.html">Sign Up</a>
+                    <img id="user-pfp" class="user-pfp" src="#" alt="User Profile">
+                </div>
+            </li>
         </ul>
         <p class="menu cta">Menu</p>
 

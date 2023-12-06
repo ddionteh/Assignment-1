@@ -111,7 +111,7 @@
   font-size: calc( 10px + 2vw );
   text-align: center;
   padding-top: 100px;
-  color: white;
+  color: rgb(119, 141, 229);
   transition: opacity 5s ease-in;
 }
 

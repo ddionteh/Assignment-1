@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Responsive Login and Signup Form </title>
+
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="signUp.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form class="sign-in-data" action="#">
+                        <div class="field sign-in-field">
+                            <input type="username" placeholder="Username" class="input">
+                        </div>
+
+                        <div class="field sign-in-field">
+                            <input type="password" placeholder="Password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        <div class="field button-field">
+                            <button id="sign-in-btn" onsubmit="loginUser(event)">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Signup Form -->
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Sign Up</header>
+                    <form class="sign-up-data" action="#">
+                        <div class="field sign-up-field">
+                            <input type="username" placeholder="Username" class="input" required>
+                        </div>
+
+                        <div class="field sign-up-field">
+                            <input type="password" placeholder="Create password" class="password" required>
+                        </div>
+
+                        <div class="field sign-up-field">
+                            <input type="password" placeholder="Confirm password" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        
+                        <div class="field sign-up-field">
+                            <input type="file" id="profilePic" accept="image/*" required style="display: none;">
+                            <label for="profilePic" id="fileLabel">Upload image for Profile picture</label>
+    
+                        </div>
+                        
+                        <div class="field button-field">
+                            <button id="sign-up-btn" onsubmit="registerUser(event)">Sign Up</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script src="signUp.js"></script>
+    </body>
+</html>
