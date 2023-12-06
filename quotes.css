@@ -2,132 +2,95 @@
     margin: 0;
     padding: 0;
   }
-  
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-/* Define the style for the navigation bar */
-.nav {
-  display: flex;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  justify-content: space-between;
-  padding: 5px 10px; /* Adjust vertical and horizontal padding */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it's above other elements on the page */
-}
-
-/* Define the style for the navigation links */
-.nav a {
-  margin-left: 10px; /* Reduce margin for a more compact layout */
-  text-decoration: none;
-  color: white;
-}
-
-.nav-links a,
-.cta,
-.overlay__content a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: #edf0f1;
-  text-decoration: none;
-}
-
-/* Define the style for the navigation logo */
-.nav .logo {
-  width: 80px; 
-  height: 80px; 
-  cursor: pointer;
+ 
+/* Styling for Quotes page */
+.quotes-page {
+  margin-top: 90px;
+  overflow-x: auto;
+  background-color: whitesmoke;
+  height: auto;
   margin-left: 10px;
 }
 
-.nav-links {
-  list-style: none;
+.quotes-page > h1 {
+  font-size: calc(15px + 1.5vw);
+}
+
+.category-section {
   display: flex;
-  margin-right: 20px;
-}
-
-.nav-links li {
-  padding: 0px 15px; /* Adjust padding for a more compact layout */
-}
-
-.nav-links li a {
-  transition: color 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-  color: #0088a9;
-}
-
-.cta {
-  padding: 6px 20px; /* Adjust padding for a more compact button */
-  background-color: rgba(0, 136, 169, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease 0s;
-}
-
-.cta:hover {
-  background-color: rgba(0, 136, 169, 0.8);
-}
-
-/* Mobile Navigation */
-
-.menu {
-    display: none;
-    margin-right: 30px;
-}
-  
-.overlay {
-height: 100%;
-width: 0;
-position: fixed;
-z-index: 1;
-left: 0;
-top: 0;
-background-color: #24252a;
-overflow-x: hidden;
-transition: width 0.5s ease 0s;
-}
-
-.overlay--active {
-width: 100%;
-}
-
-.overlay-content {
-display: flex;
-height: 100%;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-.overlay a {
-padding: 15px;
-font-size: 36px;
-display: block;
-transition: color 0.3s ease 0s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-color: #0088a9;
-}
-.overlay .close {
-position: absolute;
-top: 20px;
-right: 45px;
-font-size: 60px;
-color: #edf0f1;
+  gap: calc(3px + 0.8vw);
+  flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 .category {
-  position: absolute;
-  top:90px;
+  display: flex;
+  border: 3px solid grey;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 1px rgba(125, 124, 133, 0.9);
+  width: 100px;
+  height: calc(6px + 0.3vw);
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 1.1vw);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.category:hover {
+  background-color: #ddd;
+}
+ 
+.selected {
+  background-color: green;
+}
+
+.quote-card {
+  background-color: #ffffff; /* White background */
+  border: 2px solid #dddddd; /* Light gray border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lifted effect */
+  max-width: 400px; /* Maximum width for responsiveness */
+  margin: 20px auto; /* Center the card and provide spacing */
+}
+
+.quote-image {
+  width: 100px; /* Set the width of the philosopher's image */
+  height: 100px; /* Set the height of the philosopher's image */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+  border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
+  margin-bottom: 10px; /* Spacing between image and text */
+}
+
+.quote-text {
+  font-size: 18px; /* Set the font size for the quote text */
+  line-height: 1.4; /* Set the line height for better readability */
+  margin-bottom: 10px; /* Spacing between quote text and author */
+}
+
+.quote-author {
+  font-size: 16px; /* Set the font size for the philosopher's name */
+  font-weight: bold; /* Make the name bold for emphasis */
+  margin-bottom: 5px; /* Spacing between author and categories */
+}
+
+.quote-categories {
+  font-size: 14px; /* Set the font size for the categories */
+  color: #555555; /* Dark gray color for the categories */
+}
+
+/* Optional: Style for hover effect */
+.quote-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow on hover */
+  transform: scale(1.02); /* Slightly scale up the card on hover */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+
+
 
 /* Define the style for the footer */
 
@@ -186,28 +149,6 @@ color: #edf0f1;
 .Partners {
   padding-left: 3vw;
 }
-
-/* Resizing for Menu/Navigation bar */
-@media screen and (max-height: 450px) {
-  .overlay a {
-      font-size: 20px;
-  }
-  .overlay .close {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-  }
-  }
-  
-  @media only screen and (max-width: 768px) {
-  .nav-links,
-  .cta {
-      display: none;
-  }
-  .menu {
-      display: initial;
-  }
-  } 
   
 /* Resizing for Footer, mobile version */
 @media only screen and (max-width: 768px) {
